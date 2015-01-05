@@ -1,0 +1,68 @@
+<!-- index.html -->
+
+<html>
+<head>
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <link href='http://fonts.googleapis.com/css?family=Old+Standard+TT' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Vast+Shadow' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <div id = "page">
+    <div id = "slate">
+    </div>
+
+      <div id = "move">
+        <span id="words">
+        REPLACE
+      </span>
+    </div>
+  </div>
+</br>
+<div id = "number"><h2>-ii-</h2></div>
+<div id="title"><h2>TITLE</h2></div>
+<a href=pBack> <div id = "back"><h2>previous</h2></div></a>
+<a href=pNext> <div id = "next"><h2>next</h2></div></a>
+
+<script>
+var wordSpan = document.getElementById("words");
+var slate = document.getElementById("slate");
+var move = document.getElementById("move");
+var page = document.getElementById("page");
+var x = 1;
+var pPos = 44;
+var wipe = function(){
+  slate.style.background = "rgba(244,235,244," + x + ")";
+  if(x > 0){x = x-0.03;
+  }else{clearInterval(wInt)}
+    console.log("WIPE");
+
+  }
+var pMove = function(){
+  move.style.marginLeft = pPos;
+    if(pPos > 0){pPos = pPos - 4;}
+      else{clearInterval(pInt)}
+        console.log("FLIP");
+      }
+
+
+      var wInt = setInterval(wipe , 5);
+      var pInt = setInterval(pMove , 9);
+
+function shrink()
+      {console.log("shrink");
+      wordSpan.style.fontSize = 18;
+      console.log(wordSpan.offsetHeight);
+      console.log(page.offsetHeight);
+      console.log(wordSpan.offsetHeight > page.offsetHeight);
+        while(wordSpan.offsetHeight > page.offsetHeight)
+          {
+            wordSpan.style.fontSize = parseInt(wordSpan.style.fontSize) - 1;
+
+          }
+        }
+
+shrink();
+</script>
+
+</body>
+</html>

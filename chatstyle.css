@@ -1,0 +1,117 @@
+html {
+
+  margin: 0 auto;
+
+}
+header {
+  text-align: center;
+  color: #fff;
+  background: #6496c8;
+  text-shadow: 3px 3px 2px #3456ef;
+}
+
+
+#body{
+  background-color : lightblue;
+  font-family: sans-serif;
+  font-size: 16px;
+  min-width: 650px;
+  min-height: 400px;
+  background: -webkit-linear-gradient(#ffffff , #c9c9c9);
+  background: -o-linear-gradient(#ffffff , #c9c9c9);
+  background: -moz-linear-gradient(#ffffff , #c9c9c9);
+  background: linear-gradient(#ffffff , #b9b9c9);
+
+}
+
+#box{
+    border:1 solid black;
+    margin: 10 10;
+    width:75%;
+    float:left;
+    height:80%;
+    background: rgba(255,255,255,0.5);
+    overflow:scroll;
+}
+
+#input{
+  border:1 solid black;
+  margin-left: 10;
+  width:75%;
+  height:70px;
+  background: white;
+  font-size: 16px;
+  float:left;
+  background: rgba(255,255,255,0.4);
+}
+#say{
+  color: #fff;
+  background-color: #6496c8;
+  width:110px;
+  height:70px;
+  font-size:26px;
+  float:left;
+  margin-left: 40px;
+  border:none;
+  border-radius:5px;
+}
+
+
+#say:hover,
+#say.hover{
+  background-color: #446689;
+  text-shadow: -1px 1px #111111;
+}
+#say:active,
+#say.active{
+  background-color: #27496d;
+  text-shadow: -1px 1px #111111;
+
+}
+#usersList{
+  border:1 solid black;
+  margin: 10 0 0 30;
+  width:18%;
+  float:left;
+  height: 50%;
+  background: rgba(255,255,255,0.4);
+  overflow:scroll;
+  list-style:none;
+}
+
+#list{
+  width:98%;
+  list-style:none;
+  float:left;
+  padding:0 0 0 10;
+
+}
+#handlebox{
+  margin: 10 0 0 30;
+  width:18%;
+  float:left;
+  text-align:center;
+
+}
+#handle{
+  width:100%;
+  height: 24px;
+  font-size: 16px;
+  padding-left:10px;
+  border:1 solid black;
+  background: rgba(255,255,255,0.4);
+
+}
+
+#usersList li{
+  padding-left:10px;
+}
+img{
+  max-width: 90%;
+}
+div{
+  border-radius:5px;
+}
+ul{
+  list-style:none;
+}

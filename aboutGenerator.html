@@ -1,0 +1,112 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body id="body" backgroundColor = "red">
+
+<script>
+var bod = document.getElementById("body");
+bod.style.textAlign = "center";
+bod.style.backgroundColor = "red";
+bod.style.fontSize = "32px";
+var brk = document.createElement("br");
+var heading = document.createElement("h1");
+heading.innerText = "Let's talk about you.";
+var nam = document.createElement("input");
+nam.placeholder = "your name here";
+nam.style.padding = "10px";
+var town = document.createElement("input");
+town.placeholder = "your hometown";
+town.style.padding = "10px";
+var sign = document.createElement("input");
+sign.placeholder = "your sign";
+sign.style.padding = "10px";
+var color = document.createElement("input");
+color.placeholder = "your favorite color";
+color.style.padding = "10px";
+var but = document.createElement("button");
+but.innerHTML = "Magically generate your new homepage!";
+but.style.padding = "10px";
+but.style.fontSize = "14px";
+
+var newPage = function(){
+
+  var nameA = nam.value;
+  var townA = town.value;
+  var signA = sign.value;
+  var colorA = color.value;
+  var newTitle = document.createElement("h1");
+  newTitle.innerHTML = "All about " + nameA;
+
+  var mainD = document.createElement("div");
+  mainD.style.width = "100%";
+  mainD.style.height = 100;
+  mainD.style.textAlign = "center";
+  mainD.style.background = "rgba(200,200,210,0.5)";
+  mainD.style.borderRadius = 10;
+
+  var signD = document.createElement("div");
+  signD.style.width = "48%";
+  signD.style.cssFloat = "left";
+  signD.style.styleFloat = "left";
+
+  var signP = document.createElement("p");
+  signP.innerHTML = nameA + "'s sign is " + signA;
+
+  var townD = document.createElement("div");
+  townD.style.width="48%";
+  townD.style.cssFloat = "right";
+
+  var townP = document.createElement("p");
+  townP.innerHTML = nameA + "'s hometown is " + townA;
+
+  var slate = document.createElement("div");
+  slate.style.width = "100%";
+  slate.style.height = "100%";
+  slate.style.background = "rgba(255,255,255,0.01)";
+  slate.style.position = "fixed";
+  slate.style.margin =  -10,  20 ,10,-20 ;
+  var x = 0.01
+
+var wipe = function(){
+  bod.insertBefore(slate , heading);
+  slate.style.background = "rgba(255,255,255," + x + ")";
+  if(x <= 1){x = x+0.04;}
+}
+
+  var rec = function(){
+  clearInterval(wiper);
+  bod.removeChild(heading);
+  bod.removeChild(nam);
+  bod.removeChild(town);
+  bod.removeChild(sign);
+  bod.removeChild(color);
+  bod.removeChild(but);
+  bod.style.backgroundColor = colorA;
+  bod.appendChild(newTitle);
+  bod.appendChild(brk);
+  bod.appendChild(mainD);
+  mainD.appendChild(signD);
+  signD.appendChild(signP);
+  mainD.appendChild(townD);
+  townD.appendChild(townP);
+  bod.removeChild(slate);
+}
+
+var wiper = setInterval(wipe,1);
+setTimeout(rec , 2000);
+}
+
+but.addEventListener("click" , newPage);
+bod.appendChild(heading);
+bod.appendChild(brk);
+bod.appendChild(nam);
+bod.appendChild(town);
+bod.appendChild(sign);
+bod.appendChild(color);
+bod.appendChild(but);
+
+
+</script>
+</body>
+</html>
