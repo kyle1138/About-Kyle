@@ -1,5 +1,5 @@
-// var chatToo = new WebSocket("ws://kyle.princesspeach.nyc:3000");
-var chatToo = new WebSocket("ws://localhost:3000");
+var chatToo = new WebSocket("ws://kyle.princesspeach.nyc:3000");
+// var chatToo = new WebSocket("ws://localhost:3000");
 var info = {namList:[]};
 
 var talker = function(name , message){
