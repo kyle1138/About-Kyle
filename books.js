@@ -62,10 +62,12 @@ else if (urlArr[1] === "favicon.ico") {
     res.end(pix);
   });
 }else {console.log(urlArr[1]);
+  if(urlArr[1]){
   fs.readFile(urlArr[1], function(err, data) {
     var page = data.toString();
     res.end(page);
   });
+}
 }
 });
 
