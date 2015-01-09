@@ -1,5 +1,3 @@
-//books.js
-
 var library = {Alice_in_Wonderland:"aliceInWonderland.txt" , Peter_Pan:"peter.txt" , Aesops_Fables:"aesop.txt" ,
 Jungle_Book:"jungle.txt" , Andersens_Fairy_Tales:"andersen.txt"};
 var http = require("http");
@@ -11,7 +9,7 @@ var urlArr = requrl.split("/");
 
 if (urlArr[2] === "style.css"){
   fs.readFile("style.css" , function(err,data){
-    var style = data.toString();
+    var style = data;
     res.end(style);
   })
 }else if(library[urlArr[1]]){
@@ -32,7 +30,6 @@ if (urlArr[2] === "style.css"){
         result = result.toString().replace("pNext","");
       }
 
-      // result = result.replace("pNext", "http://localhost:2000/" + urlArr[1] + "/" + (parseInt(urlArr[2]) + 1)+" ");
       result = result.toString().replace("ii", urlArr[2]);
       title = urlArr[1].replace(/_/g, " ");
       result = result.replace("TITLE", title);
@@ -50,7 +47,8 @@ else if (urlArr[1] === "favicon.ico") {
     var splash = data.toString();
     res.end(splash);
   });
-} else if (urlArr[1] === "splash.css") {
+}
+else if (urlArr[1] === "splash.css") {
   fs.readFile("splash.css", function(err, data) {
     var splashStyle = data.toString();
     res.end(splashStyle);
@@ -71,7 +69,8 @@ else if (urlArr[1] === "favicon.ico") {
 }
 });
 
-server.listen(80);
+
+server.listen(2000);
 
 
 var paginate = function(book , pg){

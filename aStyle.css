@@ -3,17 +3,33 @@ body{
   margin: auto;
   background-color: #ccc;
 }
+.bigDiv{
+  width: 100%;
+  display: block;
+
+}
+.cheese{
+  font-family: 'Alfa Slab One', sans-serif;
+  display:block;
+  /*text-shadow: 3px 3px 4px #ff1100;*/
+  position: absolute;
+  top: 24;
+  /*left: 440;*/
+  visibility: hidden;
+  color: yellow;
+
+}
 
 #theHeader{
 
-  /*background-color: #333;*/
   color: #ffffff;
-  text-shadow: 2px 2px 4px #0000ff;
+  /*text-shadow: 2px 2px 4px #0000ff;*/
   text-align: center;
   background: url("TopBar2.jpg");
   background-size: 100%;
   background-repeat: no-repeat;
   height: 200px;
+  position:relative;
 
 }
 
@@ -22,7 +38,7 @@ body{
   background-color: yellow;
   color: black;
   font-size:22px;
-  padding: 14 0;
+  height:40;
 
 }
 
@@ -83,7 +99,6 @@ body{
   margin: 50 auto;
   width: 500px;
   display: block;
-
   padding-left: 102;
 
 }
@@ -91,21 +106,17 @@ body{
   list-style-type: none;
   font-size:24px;
 }
-nav ul{
-  width: 680;
-  margin:0 auto;
+#theNav ul{
+  width: 790;
+  margin: 14 auto;
 }
 
-nav li {
+#theNav li {
   display: inline;
   margin: auto 20px;
 }
 
-.bigDiv{
-  width: 100%;
-  display: block;
 
-}
 
 a:visited {
   color: black;

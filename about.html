@@ -2,18 +2,30 @@
 <head>
 <link rel="stylesheet" type = "text/css" href = "aStyle.css">
 <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Alfa+Slab+One' rel='stylesheet' type='text/css'>
+
 </head>
 <body>
 <header>
   <div id="theHeader" class = "bigDiv">
   </br>
-  <h1>Kyle Hogan</h1>
+  <!-- <h1>Kyle Hogan</h1> -->
+  <!-- <span id="frame0" class="cheese">Kyle Hogan</span></br>
+  <span id="frame1" class="cheese">Kyle Hogan</span></br>
+    <span id="frame2" class="cheese">Kyle Hogan</span></br>
+      <span id="frame3"class="cheese">Kyle Hogan</span></br>
+        <span id="frame4"class="cheese">Kyle Hogan</span></br>
+          <span id="frame5"class="cheese">Kyle Hogan</span></br>
+            <span id="frame6"class="cheese">Kyle Hogan</span></br>
+              <span id="frame7"class="cheese">Kyle Hogan</span></br>
+                <span id="frame8"class="cheese">Kyle Hogan</span></br>
+                  <span id="frame9"class="cheese">Kyle Hogan</span></br> -->
 
-  <h2>Full Stack Web Developer in Training    *  Bad Sense of Humor  *  Kind of a Jerk</h2>
+  <!-- <h2>Full Stack Web Developer in Training    *  Bad Sense of Humor  *  Kind of a Jerk</h2> -->
 
 </div>
 </header>
-<nav >
+
   <div id="theNav" class = "bigDiv">
     <ul>
       <li><a href="about.html">About Me</a></li>
@@ -23,7 +35,7 @@
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </div>
-</nav>
+
 <section>
   <div id="main" class = "bigdiv">
     <div id="bio">
@@ -39,16 +51,63 @@
   <img id="portrait" src="kdog.jpg">
 </div>
 
-
-
-
-
-
-
-
-
-
-
 </section>
+
+
+<script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.js"></script>
+<script>
+
+  $(function(){
+
+    $("#theNav").click(function(){
+      $("#theNav").slideUp(1502);
+    });
+
+  });
+  var theHeader = document.getElementById("theHeader");
+  var x = 0
+  var sz = 78;
+  var titAni = function(){
+    if (x < 10){
+    var idString = "frame" + x;
+    var marq = document.createElement("span");
+    var shadow = document.createElement("span");
+    shadow.innerText = "KYLE HOGAN";
+    marq.innerText = "KYLE HOGAN";
+    shadow.id = "shadow"+x;
+    marq.id = "frame"+x;
+    shadow.className = "cheese";
+    marq.className = "cheese";
+    shadow.style.fontSize = (12 + 11*x).toString();
+    marq.style.fontSize = (10 + 11*x).toString();
+
+    theHeader.appendChild(shadow);
+    theHeader.appendChild(marq);
+    var shadowW = shadow.offsetWidth;
+    var headW = theHeader.offsetWidth;
+    var titleW = marq.offsetWidth;
+    console.log(headW + " _____ " + titleW);
+    shadow.style.left = (headW/2 - shadowW/2).toString();
+    shadow.style.top = 28;
+    marq.style.left = (headW/2 - titleW/2).toString();
+    theHeader.appendChild(shadow);
+    shadow.style.color = "red";
+    shadow.style.visibility = "visible";
+    marq.style.visibility = "visible";
+  }
+    if (x > 6 && x < 16 ){
+      var killTitle = "frame" + (x-7);
+      var marq2 = document.getElementById("frame" + (x-7));
+      var shadow2 = document.getElementById("shadow" + (x-7));
+      shadow2.style.visibility = "hidden";
+      marq2.style.visibility = "hidden";
+    }
+    x = x+1;
+
+}
+setInterval(titAni,70);
+
+</script>
+
 </body>
 </html>
