@@ -53,7 +53,7 @@ else if (urlArr[1] === "splash.css") {
     var splashStyle = data.toString();
     res.end(splashStyle);
   });
-} else if (urlArr[1].slice(-3) === "jpg") {
+} else if (urlArr[1].slice(-3) === "jpg" || urlArr[1].slice(-3) === "png") {
   console.log(urlArr[1] + "ITS A JPG");
   fs.readFile(urlArr[1], function(err, data) {
     var pix = data;

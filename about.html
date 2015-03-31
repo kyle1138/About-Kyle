@@ -53,7 +53,7 @@
   var sz = 78;
   var kyle = "KYLE HOGAN"
   var titAni = function(){
-    if (x < 10){
+    if (x < 11){
     var idString = "frame" + x;
     var marq = document.createElement("span");
     var shadow = document.createElement("span");
@@ -80,18 +80,18 @@
     shadow.style.visibility = "visible";
     marq.style.visibility = "visible";
   }
-    if (x > 6 && x < 16 ){
+    if (x > 6 && x < 17 ){
       var killTitle = "frame" + (x-7);
       var marq2 = document.getElementById("frame" + (x-7));
       var shadow2 = document.getElementById("shadow" + (x-7));
       shadow2.style.visibility = "hidden";
       marq2.style.visibility = "hidden";
-    }
+    }else if (x > 20){ clearInterval(titleAni) }
     x = x+1;
 
 }
 
-setInterval(titAni,60);
+var titleAni = setInterval(titAni,60);
 
 </script>
 

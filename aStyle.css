@@ -21,7 +21,10 @@ body{
 
 }
 
+.pTitle{
+  text-align: center;
 
+}
 
 
 #theHeader{
@@ -35,7 +38,12 @@ body{
   height: 210px;
   position:relative;
   min-width: 870px;
+  overflow: hidden;
 
+}
+
+#theHeader span{
+  margin: 0 auto;
 }
 
 #theNav{
@@ -127,7 +135,7 @@ body{
 
 #theNav li {
   display: inline;
-  margin: auto 20px;
+  margin: auto 50px;
 }
 
 
