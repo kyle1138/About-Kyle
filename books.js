@@ -78,7 +78,7 @@ else if (urlArr[1] === "splash.css") {
 });
 
 
-server.listen(2000);
+server.listen(8080);
 
 
 var paginate = function(book , pg){
