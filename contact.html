@@ -1,15 +1,18 @@
 <html>
 <head>
-<link rel="stylesheet" type = "text/css" href = "aStyle.css">
-<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+  <title>Kyle Hogan's Personal Site</title>
+  <link rel="stylesheet" type = "text/css" href = "aStyle.css">
+  <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Alfa+Slab+One' rel='stylesheet' type='text/css'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 </head>
 <body>
 <header>
   <div id="theHeader" class = "bigDiv">
   </br>
-  <h1>Kyle Hogan</h1>
+  <!-- <h1>Kyle Hogan</h1>
 
-  <h2>Full Stack Web Developer in Training    *  Bad Sense of Humor  *  Kind of a Jerk</h2>
+  <h2>Full Stack Web Developer in Training    *  Bad Sense of Humor  *  Kind of a Jerk</h2> -->
 
 </div>
 </header>
@@ -50,5 +53,48 @@
 
 
 </section>
+
+<script>
+
+
+  var theHeader = document.getElementById("theHeader");
+  var i = 0
+  var x = 10
+  var sz = 78;
+  var kyle = "KYLE HOGAN"
+  var titAni = function(){
+
+    var idString = "frame" + x;
+    var marq = document.createElement("span");
+    var shadow = document.createElement("span");
+    shadow.innerText = "KYLE HOGAN";
+    marq.innerText = "KYLE HOGAN";
+    shadow.id = "shadow"+x;
+    marq.id = "frame"+x;
+    shadow.className = "cheese";
+    marq.className = "cheese";
+    shadow.style.fontSize = (122).toString();
+    marq.style.fontSize = (120).toString();
+
+    theHeader.appendChild(shadow);
+    theHeader.appendChild(marq);
+    var shadowW = shadow.offsetWidth;
+    var headW = theHeader.offsetWidth;
+    var titleW = marq.offsetWidth;
+    shadow.style.left = (headW/2 - shadowW/2).toString();
+    shadow.style.top = 28;
+    marq.style.left = (headW/2 - titleW/2).toString();
+    theHeader.appendChild(shadow);
+    shadow.style.color = "red";
+    shadow.style.visibility = "visible";
+    marq.style.visibility = "visible";
+
+
+
+}
+
+titAni();
+
+</script>
 </body>
 </html>

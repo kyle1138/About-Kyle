@@ -21,6 +21,20 @@ body{
 
 }
 
+
+.cheeseS{
+  font-family: 'Alfa Slab One', sans-serif;
+  display:block;
+  /*text-shadow: 3px 3px 4px #ff1100;*/
+  position: absolute;
+  top: 24;
+  /*left: 440;*/
+  color: yellow;
+  text-align: center;
+  margin: 0 auto;
+
+}
+
 .pTitle{
   text-align: center;
 
