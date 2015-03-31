@@ -25,7 +25,7 @@ if (urlArr[2] === "style.css"){
       var lines = book.split("\n");
       var totalPages = Math.floor(lines.length / 22) + 1;
       if (urlArr[2] < totalPages) {
-        result = result.toString().replace("pNext", "http://kyle.princesspeach.nyc/" + urlArr[1] + "/" + (parseInt(urlArr[2]) + 1));
+        result = result.toString().replace("pNext", "http://localhost:2000/" + urlArr[1] + "/" + (parseInt(urlArr[2]) + 1));
       } else {
         result = result.toString().replace("pNext","");
       }
@@ -59,12 +59,20 @@ else if (urlArr[1] === "splash.css") {
     var pix = data;
     res.end(pix);
   });
-}else {console.log(urlArr[1]);
+}else{console.log(urlArr[1]);
   if(urlArr[1]){
   fs.readFile(urlArr[1], function(err, data) {
+    if(data)
+    {var page = data.toString();
+    res.end(page);}
+  });
+}else if(!urlArr[1])
+{
+  fs.readFile("about.html", function(err, data) {
     var page = data.toString();
     res.end(page);
-  });
+  })
+
 }
 }
 });

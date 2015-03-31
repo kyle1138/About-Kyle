@@ -1,27 +1,16 @@
+
 <html>
 <head>
 <link rel="stylesheet" type = "text/css" href = "aStyle.css">
 <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Alfa+Slab+One' rel='stylesheet' type='text/css'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
 </head>
 <body>
 <header>
   <div id="theHeader" class = "bigDiv">
   </br>
-  <!-- <h1>Kyle Hogan</h1> -->
-  <!-- <span id="frame0" class="cheese">Kyle Hogan</span></br>
-  <span id="frame1" class="cheese">Kyle Hogan</span></br>
-    <span id="frame2" class="cheese">Kyle Hogan</span></br>
-      <span id="frame3"class="cheese">Kyle Hogan</span></br>
-        <span id="frame4"class="cheese">Kyle Hogan</span></br>
-          <span id="frame5"class="cheese">Kyle Hogan</span></br>
-            <span id="frame6"class="cheese">Kyle Hogan</span></br>
-              <span id="frame7"class="cheese">Kyle Hogan</span></br>
-                <span id="frame8"class="cheese">Kyle Hogan</span></br>
-                  <span id="frame9"class="cheese">Kyle Hogan</span></br> -->
-
-  <!-- <h2>Full Stack Web Developer in Training    *  Bad Sense of Humor  *  Kind of a Jerk</h2> -->
 
 </div>
 </header>
@@ -29,9 +18,7 @@
   <div id="theNav" class = "bigDiv">
     <ul>
       <li><a href="about.html">About Me</a></li>
-      <li><a href="chat-about.html">Chat Room</a></li>
-      <li><a href="reader-about.html">E-Reader</a></li>
-      <li>Future Projects</li>
+      <li><a href="projects.html">Projects</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </div>
@@ -39,16 +26,18 @@
 <section>
   <div id="main" class = "bigdiv">
     <div id="bio">
-    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In case you missed it at the top of the page, my name is Kyle Hogan, and
-      I am currently a student in General Assembly's Web Development Immersive course.
+    <p>In case you missed it at the top of the page, my name is Kyle Hogan, and
+      I am a graduate of General Assembly's Web Development Immersive course.
       I'm seeking out opportunities that will help me build upon the knowledge base
-      that I've started laying the foundation for at GA. By the time I complete the
-      program, I expect to be qualified as an entry-level web developer, and hopefully
-      be able to build my own lightsaber.
+      that I've started laying the foundation for at GA. I'm a team player, a problem solver,
+      a lover of small dogs, and all that other good stuff. I would be very happy
+      to entertain any prospect (related to web developement) that would provide
+      me with the opportunity for technical learning and professional growth.
+
 
 </p>
 </div>
-  <img id="portrait" src="kdog.jpg">
+  <img id="portrait" src="kOnBeach.jpg">
 </div>
 
 </section>
@@ -57,16 +46,12 @@
 <script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.js"></script>
 <script>
 
-  $(function(){
 
-    $("#theNav").click(function(){
-      $("#theNav").slideUp(1502);
-    });
-
-  });
   var theHeader = document.getElementById("theHeader");
+  var i = 0
   var x = 0
   var sz = 78;
+  var kyle = "KYLE HOGAN"
   var titAni = function(){
     if (x < 10){
     var idString = "frame" + x;
@@ -105,7 +90,8 @@
     x = x+1;
 
 }
-setInterval(titAni,70);
+
+setInterval(titAni,60);
 
 </script>
 
