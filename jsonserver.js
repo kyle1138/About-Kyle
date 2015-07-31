@@ -88,8 +88,8 @@ server.on("connection" , function(ws){
     var escapee = clients.indexOf(ws);
     clients.splice(escapee,1);
     namListS.splice(escapee,1);
-    console.log("somebody left")
-    clients.forEach(function(user){user.send("A user has left the room")})
+    console.log("somebody left");
+    clients.forEach(function(user){user.send("A user has left the room")});
 
   })
 })
